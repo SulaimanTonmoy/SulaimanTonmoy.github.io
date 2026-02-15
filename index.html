@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulaiman Hossain- Software Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                    SH
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-400 transition-colors">About</a>
+                    <a href="#skills" class="nav-link hover:text-blue-400 transition-colors">Skills</a>
+                    <a href="#projects" class="nav-link hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#experience" class="nav-link hover:text-blue-400 transition-colors">Experience</a>
+                    <a href="#contact" class="nav-link hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#home" class="block hover:text-blue-400 transition-colors">Home</a>
+                <a href="#about" class="block hover:text-blue-400 transition-colors">About</a>
+                <a href="#skills" class="block hover:text-blue-400 transition-colors">Skills</a>
+                <a href="#projects" class="block hover:text-blue-400 transition-colors">Projects</a>
+                <a href="#experience" class="block hover:text-blue-400 transition-colors">Experience</a>
+                <a href="#contact" class="block hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center" data-aos="fade-up">
+                <div class="mb-8 relative inline-block">
+                    <div class="w-40 h-40 mx-auto rounded-full bg-gradient-to-r from-blue-400 to-purple-600 p-1 animate-pulse">
+                        <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
+                            <i class="fas fa-code text-5xl text-blue-400"></i>
+                        </div>
+                    </div>
+                    <div class="absolute -top-2 -right-2 w-8 h-8 bg-green-500 rounded-full animate-ping"></div>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">
+                    <span class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        Sulaiman Hossain
+                    </span>
+                </h1>
+                <div class="text-2xl md:text-3xl mb-6 text-gray-300">
+                    <span id="typed-text"></span><span class="cursor">|</span>
+                </div>
+                <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+                    Highly motivated Computer Science & Engineering student with hands-on experience in 
+                    problem-solving, programming and database management. Passionate about technology and 
+                    committed to contributing to high-quality products.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border border-blue-400 rounded-full hover:bg-blue-400/10 transition-all">
+                        Get In Touch
+                    </a>
+                </div>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/SulaimanTonmoy" class="text-2xl hover:text-blue-400 transition-colors transform hover:scale-110">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/sulaiman-hossain" class="text-2xl hover:text-blue-400 transition-colors transform hover:scale-110">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:sulaimantonmoy@gmail.com" class="text-2xl hover:text-blue-400 transition-colors transform hover:scale-110">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-gray-400"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                About <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Me</span>
+            </h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="flex justify-center md:justify-start">
+                        <img src="https://i.postimg.cc/XJgmyTKw/sulaiman.jpg" alt="Sulaiman Hossain" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover object-top shadow-2xl">
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-400">Building the Future, One Line at a Time</h3>
+                    <p class="text-gray-300 mb-6">
+                        I'm a Computer Science & Engineering student with hands-on experience in problem-solving, 
+                        programming and database management. My journey in tech is driven by curiosity and a passion 
+                        for creating innovative solutions to real-world problems.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        I specialize in Python, Java, web development technologies, and quality assurance. 
+                        With strong foundations in both frontend and backend development, I'm committed to 
+                        building high-quality, reliable applications. When I'm not coding, you'll find me 
+                        exploring new technologies, contributing to open-source projects, or organizing tech events.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-900/50 p-4 rounded-lg">
+                            <i class="fas fa-phone text-green-400 mb-2"></i>
+                            <h4 class="font-semibold">Phone</h4>
+                            <p class="text-sm text-gray-400">+880 1776173132</p>
+                        </div>
+                        <div class="bg-gray-900/50 p-4 rounded-lg">
+                            <i class="fas fa-map-marker-alt text-red-400 mb-2"></i>
+                            <h4 class="font-semibold">Location</h4>
+                            <p class="text-sm text-gray-400">Bangladesh</p>
+                        </div>
+                        <div class="bg-gray-900/50 p-4 rounded-lg">
+                            <i class="fas fa-language text-blue-400 mb-2"></i>
+                            <h4 class="font-semibold">Languages</h4>
+                            <p class="text-sm text-gray-400">Bangla, English</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                Technical <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Skills</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-blue-400 transition-all">
+                        <i class="fas fa-code text-4xl text-blue-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Frontend Development</h3>
+                        <div class="space-y-3">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span>Python</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span>Java</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span>React</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-purple-400 transition-all">
+                        <i class="fas fa-server text-4xl text-purple-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Backend Development</h3>
+                        <div class="space-y-3">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span>Node.js/Express</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span>MySQL/MongoDB</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span>MERN Stack</span>
+                                    <span>86%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 86%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-green-400 transition-all">
+                        <i class="fas fa-cloud text-4xl text-green-400 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">DevOps & Tools</h3>
+                        <div class="space-y-3">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span>Manual Testing</span>
+                                    <span>92%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span>API Testing</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-1">
+                                    <span>Test Automation</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="w-full bg-gray-700 rounded-full h-2">
+                                    <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                Featured <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Projects</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-blue-400 transition-all transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                            <i class="fas fa-users text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">BRACU Community</h3>
+                            <p class="text-gray-400 mb-4">Full-stack community platform using MERN stack for students to connect, share resources and collaborate within university environment.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Node.js</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">MongoDB</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/SulaimanTonmoy/BRACU-Community" class="text-blue-400 hover:text-blue-300">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-purple-400 transition-all transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-gamepad text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Car Game</h3>
+                            <p class="text-gray-400 mb-4">Interactive car-driving game built with Pygame featuring vehicle physics, collision detection, scoring mechanics and multiple levels.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 rounded-full text-sm">Pygame</span>
+                                <span class="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm">Game Dev</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/SulaimanTonmoy/Car-Game" class="text-purple-400 hover:text-purple-300">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-green-400 transition-all transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                            <i class="fas fa-brain text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Diabetes Prediction</h3>
+                            <p class="text-gray-400 mb-4">Machine learning model in Python to predict diabetes likelihood using real patient data with web interface for user interaction.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">Python</span>
+                                <span class="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm">ML</span>
+                                <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-sm">Data Science</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/SulaimanTonmoy/Diabetes-Prediction" class="text-green-400 hover:text-green-300">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400 transition-all transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center">
+                            <i class="fas fa-sitemap text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Data Structure Project</h3>
+                            <p class="text-gray-400 mb-4">Implementation of essential data structures like trie, disjoint set union, priority queue and graph in C++ with automated testing using Google Test framework.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">C++</span>
+                                <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">Data Structures</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Google Test</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/SulaimanTonmoy/Data-Structure-Project" class="text-yellow-400 hover:text-yellow-300">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bg-gray-900 rounded-2xl overflow-hidden border border-gray-700 hover:border-red-400 transition-all transform hover:scale-105">
+                        <div class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center">
+                            <i class="fas fa-language text-6xl text-white"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Bangla Handwritten Text Recognition</h3>
+                            <p class="text-gray-400 mb-4">React-based website for automatically annotating Bangla handwritten text using EasyOCR as backend with Vite, Tailwind CSS and Node.js frontend.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">React</span>
+                                <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">EasyOCR</span>
+                                <span class="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">Vite</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/SulaimanTonmoy/Bangla-Handwritten-Text-Recognition" class="text-red-400 hover:text-red-300">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                Technical <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Journey</span>
+            </h2>
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="bg-gray-800/50 p-12 rounded-2xl border border-gray-700">
+                    <i class="fas fa-code text-6xl text-blue-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Computer Science & Engineering Student</h3>
+                    <p class="text-gray-300 mb-6">
+                        Passionate about building innovative solutions and exploring cutting-edge technologies. 
+                        Currently focusing on full-stack development, machine learning, and quality assurance 
+                        to create robust and user-friendly applications.
+                    </p>
+                    <p class="text-gray-300 mb-8">
+                        Actively contributing to open-source projects and participating in hackathons to 
+                        enhance technical skills and collaborate with the developer community.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="bg-gray-900/50 px-6 py-3 rounded-lg">
+                            <i class="fas fa-laptop-code text-green-400 mb-2"></i>
+                            <p class="text-sm">Full-Stack Development</p>
+                        </div>
+                        <div class="bg-gray-900/50 px-6 py-3 rounded-lg">
+                            <i class="fas fa-brain text-purple-400 mb-2"></i>
+                            <p class="text-sm">Machine Learning</p>
+                        </div>
+                        <div class="bg-gray-900/50 px-6 py-3 rounded-lg">
+                            <i class="fas fa-bug text-red-400 mb-2"></i>
+                            <p class="text-sm">Quality Assurance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">
+                Get In <span class="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Touch</span>
+            </h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div data-aos="fade-right">
+                        <h3 class="text-2xl font-bold mb-6">Let's Connect</h3>
+                        <p class="text-gray-300 mb-8">
+                            I'm always interested in hearing about new opportunities, exciting projects, 
+                            or just having a chat about technology. Feel free to reach out!
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-envelope text-blue-400 text-xl"></i>
+                                <span>sulaimantonmoy@gmail.com</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-phone text-green-400 text-xl"></i>
+                                <span>+880 1776173132</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-map-marker-alt text-red-400 text-xl"></i>
+                                <span>Bangladesh</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4 mt-8">
+                            <a href="https://github.com/SulaimanTonmoy" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/sulaiman-hossain" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400 transition-colors">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400 transition-colors">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" required
+                                    class="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-400 transition-colors"></textarea>
+                            </div>
+                            <button type="submit" 
+                                class="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105">
+                                Send Message
+                            </button>
+                        </form>
+                        <div id="form-message" class="mt-4 p-4 rounded-lg hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 mb-4 md:mb-0">
+                    © 2024 Sulaiman Hossain. All rights reserved.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-gray-400 hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-blue-400 transition-colors">About</a>
+                    <a href="#projects" class="text-gray-400 hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#contact" class="text-gray-400 hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
