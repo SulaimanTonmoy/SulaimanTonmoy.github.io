@@ -33,7 +33,7 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+        <div id="mobile-menu" class="md:hidden bg-gray-800 border-t border-gray-700" style="max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.3s ease, opacity 0.3s ease;">
             <div class="px-6 py-4 space-y-3">
                 <a href="#home" class="block hover:text-blue-400 transition-colors">Home</a>
                 <a href="#about" class="block hover:text-blue-400 transition-colors">About</a>
@@ -543,12 +543,9 @@
                 <div class="text-gray-400 mb-4 md:mb-0">
                     © 2024 Sulaiman Hossain. All rights reserved.
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#home" class="text-gray-400 hover:text-blue-400 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-400 hover:text-blue-400 transition-colors">About</a>
-                    <a href="#projects" class="text-gray-400 hover:text-blue-400 transition-colors">Projects</a>
-                    <a href="#contact" class="text-gray-400 hover:text-blue-400 transition-colors">Contact</a>
-                </div>
+                <button id="scroll-to-top" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all transform hover:scale-110">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
             </div>
         </div>
     </footer>

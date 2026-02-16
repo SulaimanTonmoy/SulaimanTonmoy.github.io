@@ -186,6 +186,17 @@ body {
     opacity: 1;
 }
 
+/* Scroll to top button */
+#scroll-to-top {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+}
+
+#scroll-to-top:hover {
+    background-color: #2563eb;
+}
+
 /* Form input focus effects */
 input:focus, textarea:focus {
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
