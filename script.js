@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize EmailJS
     (function() {
-        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+        emailjs.init("7_3O-6RnhYqdYuiVn"); // Replace with your actual EmailJS public key
     })();
 
     typedTextElement = document.getElementById('typed-text');
@@ -177,7 +177,7 @@ function initializeContactForm() {
             submitBtn.disabled = true;
             
             // Send email using EmailJS
-            emailjs.send("service_9x8k7q8", "template_abc123def", {
+            emailjs.send("service_v3wc7qf", "service_v3wc7qf", {
                 from_name: name,
                 from_email: email,
                 message: message,
