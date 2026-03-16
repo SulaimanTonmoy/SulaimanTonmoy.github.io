@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Initialize EmailJS
+    (function() {
+        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your actual EmailJS public key
+    })();
+
     typedTextElement = document.getElementById('typed-text');
     typeText();
     createParticles();
@@ -171,8 +176,14 @@ function initializeContactForm() {
             submitBtn.innerHTML = '<span class="loading"></span> Sending...';
             submitBtn.disabled = true;
             
-            // Simulate form submission (replace with actual form handling)
-            setTimeout(() => {
+            // Send email using EmailJS
+            emailjs.send("service_9x8k7q8", "template_abc123def", {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: "sulaimantonmoy@gmail.com"
+            })
+            .then(function(response) {
                 // Show success message
                 formMessage.className = 'mt-4 p-4 rounded-lg bg-green-500/20 text-green-400 border border-green-500/50';
                 formMessage.textContent = `Thank you for your message, ${name}! I'll get back to you soon.`;
@@ -189,7 +200,21 @@ function initializeContactForm() {
                 setTimeout(() => {
                     formMessage.classList.add('hidden');
                 }, 5000);
-            }, 1500);
+            }, function(error) {
+                // Show error message
+                formMessage.className = 'mt-4 p-4 rounded-lg bg-red-500/20 text-red-400 border border-red-500/50';
+                formMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
+                formMessage.classList.remove('hidden');
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            });
         });
     }
 }
