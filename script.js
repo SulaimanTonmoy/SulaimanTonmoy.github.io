@@ -9,6 +9,10 @@ const roles = [
     'Problem Solver',
     'Tech Enthusiast'
 ];
+
+const EMAILJS_PUBLIC_KEY = "7_3O-6RnhYqdYuiVn";
+const EMAILJS_SERVICE_ID = "service_v3wc7qf";
+const EMAILJS_TEMPLATE_ID = "template_ap6v4tn";
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -52,9 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize EmailJS
-    (function() {
-        emailjs.init("7_3O-6RnhYqdYuiVn"); // Replace with your actual EmailJS public key
-    })();
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+    } else {
+        console.error('EmailJS is not loaded. Check the EmailJS CDN script tag in index.html');
+    }
 
     typedTextElement = document.getElementById('typed-text');
     typeText();
@@ -175,9 +181,29 @@ function initializeContactForm() {
             const originalText = submitBtn.textContent;
             submitBtn.innerHTML = '<span class="loading"></span> Sending...';
             submitBtn.disabled = true;
+
+            if (typeof emailjs === 'undefined') {
+                console.error('EmailJS is not available on window.');
+                formMessage.className = 'mt-4 p-4 rounded-lg bg-red-500/20 text-red-400 border border-red-500/50';
+                formMessage.textContent = 'Email service is not loaded. Please refresh and try again.';
+                formMessage.classList.remove('hidden');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
+
+            if (!EMAILJS_TEMPLATE_ID || EMAILJS_TEMPLATE_ID.startsWith('service_') || EMAILJS_TEMPLATE_ID === 'template_ap6v4tn') {
+                console.error('EmailJS template id is invalid:', EMAILJS_TEMPLATE_ID);
+                formMessage.className = 'mt-4 p-4 rounded-lg bg-red-500/20 text-red-400 border border-red-500/50';
+                formMessage.textContent = 'Contact form is not configured (missing EmailJS template ID).';
+                formMessage.classList.remove('hidden');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
             
             // Send email using EmailJS
-            emailjs.send("service_v3wc7qf", "service_v3wc7qf", {
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
                 from_name: name,
                 from_email: email,
                 message: message,
@@ -201,9 +227,11 @@ function initializeContactForm() {
                     formMessage.classList.add('hidden');
                 }, 5000);
             }, function(error) {
+                console.error('EmailJS send failed:', error);
+                const errorText = (error && (error.text || error.message)) ? (error.text || error.message) : 'Unknown error';
                 // Show error message
                 formMessage.className = 'mt-4 p-4 rounded-lg bg-red-500/20 text-red-400 border border-red-500/50';
-                formMessage.textContent = 'Sorry, there was an error sending your message. Please try again.';
+                formMessage.textContent = `Sorry, there was an error sending your message. (${errorText})`;
                 formMessage.classList.remove('hidden');
                 
                 // Reset button
