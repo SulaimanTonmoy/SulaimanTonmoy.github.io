@@ -192,15 +192,7 @@ function initializeContactForm() {
                 return;
             }
 
-            if (!EMAILJS_TEMPLATE_ID || EMAILJS_TEMPLATE_ID.startsWith('service_') || EMAILJS_TEMPLATE_ID === 'template_REPLACE_ME') {
-                console.error('EmailJS template id is invalid:', EMAILJS_TEMPLATE_ID);
-                formMessage.className = 'mt-4 p-4 rounded-lg bg-red-500/20 text-red-400 border border-red-500/50';
-                formMessage.textContent = 'Contact form is not configured (missing EmailJS template ID).';
-                formMessage.classList.remove('hidden');
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                return;
-            }
+            
             
             // Send email using EmailJS
             emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
